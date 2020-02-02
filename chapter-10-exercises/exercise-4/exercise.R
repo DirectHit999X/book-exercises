@@ -7,7 +7,7 @@
 grants <- read.csv("data/gates_money.csv", stringsAsFactors = F)
 
 # Use the View function to look at the loaded data
-
+View(grants)
 
 # Create a variable `organization` that contains the `organization` column of 
 # the dataset
@@ -30,10 +30,10 @@ max(grants$total_amount)
 min(grants$total_amount)
 
 # Which organization received the largest grant?
-grants$organization[grants$total_amount == max(grants$total_amount)]
+grants[grants$total_amount == max(grants$total_amount), "organization"]
 
 # Which organization received the smallest grant?
-grants$organization[grants$total_amount == min(grants$total_amount)]
+grants[grants$total_amount == min(grants$total_amount), "organization"]
 
 # How many grants were awarded in 2010?
-length(grants$total_amount)
+sum(grants$start_year == 2010)
