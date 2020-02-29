@@ -1,0 +1,16 @@
+---
+title: "World Bank Indicator Visualizations"
+author: "Tie Xiao Wang"
+date: "2/21/2020"
+output: html_document
+---
+# World Bank Indicator Visualizations
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+```
+
+## Top ten CO2 emitters
+```{r CO2, echo = FALSE}
+plot(top_10_c02_plot)
+```
